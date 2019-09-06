@@ -1,2 +1,7 @@
-# prova-facil-api
-Prova fácil é um projeto Open Source com o objetivo de garantir a realização de provas através de uma rede de computadores locais sem a nescessiade internet, diminuindo o uso de papel para um mundo mais sustentavel.
+<h1>Prova Fácil API</h1>
+
+<h2>Para instalar dependências:</h2>
+<p>npm install</p>
+
+<h2>Para rodar o projeto:</h2>
+<p>npm start</p>
