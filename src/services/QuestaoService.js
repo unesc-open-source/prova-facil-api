@@ -18,8 +18,7 @@ module.exports = class QuestaoService {
          return new ResponseBuilder(false, "Tipo não informado", []);
       }
       if (obj.type != "write" &&
-            obj.type != "choices" &&
-            obj.type != "file") {
+            obj.type != "choices") {
          return new ResponseBuilder(false, "Tipo incorreto", []);
       }
    }
