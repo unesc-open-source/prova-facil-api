@@ -17,4 +17,4 @@ const QuestaoSchema = new mongoose.Schema({
 
 const Questao = mongoose.model('Questao', QuestaoSchema);
 
-module.exports = Aluno;
+module.exports = Questao;

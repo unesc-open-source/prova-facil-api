@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Questao = require('../models/Questao');
 const QuestaoService = require('../services/QuestaoService');
-const QuestaoService = new QuestaoService();
+const questaoService = new QuestaoService();
 
 /**
  * @typedef Questao
@@ -18,7 +18,7 @@ const QuestaoService = new QuestaoService();
  * @returns {Sucess}  200 - Salvo com sucesso
  */
 router.post('', async(req, res) => {
-    res.send(await QuestaoService.save(req.body));
+    res.send(await questaoService.save(req.body));
 });
 
 /**
@@ -30,7 +30,7 @@ router.post('', async(req, res) => {
  * @returns {Sucess}  200 - Atualizado com sucesso
  */
 router.put('/:id', async(req, res) => {
-    res.send(await QuestaoService.update(req.params.id, req.body));
+    res.send(await questaoService.update(req.params.id, req.body));
 });
 
 
@@ -41,7 +41,7 @@ router.put('/:id', async(req, res) => {
  * @returns {Sucess}  200 - Busca retornada com sucesso
  */
 router.get('', async(req, res) => {
-    res.send(await QuestaoService.getAll());
+    res.send(await questaoService.getAll());
 });
 
 /**
@@ -52,7 +52,7 @@ router.get('', async(req, res) => {
  * @returns {Sucess}  200 - Busca retornada com sucesso
  */
 router.get('/:id', async(req, res) => {
-    res.send(await QuestaoService.getById(req.params.id));
+    res.send(await questaoService.getById(req.params.id));
 });
 
 /**
@@ -63,7 +63,7 @@ router.get('/:id', async(req, res) => {
  * @returns {Sucess}  200 - Deletado com sucesso
  */
 router.delete('/:id', async(req, res) => {
-    res.send(await QuestaoService.delete(req.params.id));
+    res.send(await questaoService.delete(req.params.id));
 });
 
 module.exports = app => app.use('/questao', router);
