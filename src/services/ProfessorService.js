@@ -4,19 +4,19 @@ const Professor = require("../models/Professor");
 module.exports = class ProfessorService {
     async valide(obj) {
         if (!obj.login) {
-            return new ResponseBuilder(false, "Login não informado", [])
+            return new ResponseBuilder(false, "Login não informado", []);
         }
 
         if (!obj.password) {
-            return new ResponseBuilder(false, "Senha não informada", [])
+            return new ResponseBuilder(false, "Senha não informada", []);
         }
 
         if (obj.login.length < 5) {
-            return new ResponseBuilder(false, "Login muito curto", [])
+            return new ResponseBuilder(false, "Login muito curto", []);
         }
 
         if (obj.password.length < 6) {
-            return new ResponseBuilder(false, "Senha muito curta", [])
+            return new ResponseBuilder(false, "Senha muito curta", []);
         }
     }
 
