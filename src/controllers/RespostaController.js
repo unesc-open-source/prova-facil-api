@@ -11,7 +11,7 @@ const respostaService = new RespostaService();
  */
 
 /**
- * @route POST /Resposta
+ * @route POST /resposta
  * @group Resposta - Operações relacionadas a Resposta
  * @param {Resposta.model} resposta.body.required - Informações da nova Resposta
  * @produces application/json
@@ -22,7 +22,7 @@ router.post('', async(req, res) => {
 });
 
 /**
- * @route PUT /Resposta
+ * @route PUT /resposta
  * @group Resposta - Operações relacionadas a Resposta
  * @param {string} id.query.required - Id da Resposta
  * @param {Resposta.model} resposta.body.required - Informações da Resposta a ser atualizada.
@@ -35,7 +35,7 @@ router.put('/:id', async(req, res) => {
 
 
 /**
- * @route Get /Resposta
+ * @route Get /resposta
  * @group Resposta - Operações relacionadas a Resposta
  * @produces application/json
  * @returns {Sucess}  200 - Busca retornada com sucesso
@@ -45,7 +45,7 @@ router.get('', async(req, res) => {
 });
 
 /**
- * @route Get /Resposta/id
+ * @route Get /resposta/id
  * @group Resposta - Operações relacionadas a Resposta
  * @param {string} id.required - Id da Resposta
  * @produces application/json
@@ -56,7 +56,7 @@ router.get('/:id', async(req, res) => {
 });
 
 /**
- * @route Delete /Resposta/id
+ * @route Delete /resposta/id
  * @group Resposta - Operações relacionadas a Resposta
  * @param {string} id.params.required - Id da resposta
  * @produces application/json
