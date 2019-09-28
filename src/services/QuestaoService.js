@@ -32,10 +32,6 @@ module.exports = class QuestaoService {
             if (obj.token != professorToken) {
                 return new ResponseBuilder(false, "Token inválido", []);
             }
-
-            console.log(professor);
-            console.log(professorToken);
-            console.log(obj.token);
         }
     }
 
